@@ -4,8 +4,8 @@ const App2 = Vue.createApp({
   data() {
     return {
       firstName: "Роман",
-      lastName: "Суслов",
-      middleName: "Владимирович",
+      lastName: "Сусловв",
+      middleName: "Владимировичч",
     };
   },
   template: `<div>{{ lastName }} {{ firstName }} {{ middleName }}</div>`,
