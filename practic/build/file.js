@@ -1,5 +1,3 @@
-//Работает этот
-
 "use strict";
 //import createApp from 'Vue';
 //declare let Vue: any;
@@ -8,7 +6,7 @@ const App2 = Vue.createApp({
         return {
             firstName: "Роман",
             lastName: "Суслов",
-            middleName: "Владимировичxx",
+            middleName: "Владимирович",
         };
     },
     template: `<div>{{ lastName }} {{ firstName }} {{ middleName }}</div>`,
