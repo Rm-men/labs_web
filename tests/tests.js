@@ -1,13 +1,13 @@
-var foo = 1;
-console.log(foo);
-var bar;
-var = 1;
+// var foo = 1;
+// console.log(foo);
+// var bar;
+// var = 1;
 
-function test() {
+// function test() {
 
-    console.log(baz);
+//     console.log(baz);
 
-}
+// }
 
-var baz = 123;
-// oidfghidfg
+// var baz = 123;
+// // oidfghidfg
