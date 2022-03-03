@@ -9,7 +9,7 @@ const App2 = Vue.createApp({
     };
   },
   template: `<div>{{ lastName }} {{ firstName }} {{ middleName }}</div>`,
-}).mount("#app");
+}).mount("#name");
 
 // declare var Vue: any;
 // const App2 = Vue.createApp({});

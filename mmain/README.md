@@ -1,4 +1,4 @@
-# vyatg
+# syte
 
 > A Vue.js project
 

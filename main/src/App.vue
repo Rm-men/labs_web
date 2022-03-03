@@ -1,32 +1,31 @@
 <template>
-  <div>
-    <Fio lastName="Заболотский" firstName="Александр" middleName="Николаевич"></Fio>
-    <Vyatsu :results="results"></Vyatsu>
+  <div id="app">
+    <Practic lastName="Суслов" firstName="Роман" middleName="Владимирович"></Practic>
+    <Vyatsu :results="results" />
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import axios from 'axios';
-import Fio from '../../fio/src/components/Fio.vue';
-import Vyatsu from '../../vyatsu/src/components/Vyatsu.vue';
+import { Component, Vue } from "vue-property-decorator";
+import Vyatsu from "./components/Vyatsu.vue";
+import Practic from "./components/FioTemplate.vue";
+import axios from "axios";
 
-// const url = 'https://new.vyatsu.ru/';
-const url = 'http://127.0.0.1:5500/main/src/components/8.Html';
+const url = "http://localhost:8080/admission/";
 
 export default Vue.extend({
-  name: 'App',
-  components: {
-    Fio,
-    Vyatsu,
+  name: "App",
+  props: {
+    results: [],
   },
-  data() {
-    return { Fio, results: [] };
+  components: {
+    Practic,
+    Vyatsu,
   },
   mounted() {
     axios
       .get(url)
-      .then((response: any) => {
+      .then((response) => {
         console.log(response);
         this.results = response.data;
       })
