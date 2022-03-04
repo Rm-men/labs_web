@@ -6,15 +6,15 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import Vyatsu from "./components/Vyatsu.vue";
-import Practic from "./components/FioTemplate.vue";
-import axios from "axios";
+import { Component, Vue } from 'vue-property-decorator';
+import axios from 'axios';
+import Vyatsu from './components/Vyatsu.vue';
+import Practic from './components/FioTemplate.vue';
 
-const url = "http://localhost:8080/admission/";
+const url = 'http://localhost:8080/admission/';
 
 export default Vue.extend({
-  name: "App",
+  name: 'App',
   props: {
     results: [],
   },

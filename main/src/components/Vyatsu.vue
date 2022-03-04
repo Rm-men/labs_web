@@ -13,7 +13,7 @@ export default {
 <style>
 .frame {
   width: 100%;
-  height: 500px;
+  height: 1000px;
   font-size: 32px;
 }
 </style>
