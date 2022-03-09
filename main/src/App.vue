@@ -1,7 +1,11 @@
 <template>
   <div id="app">
-    <Practic lastName="Суслов" firstName="Роман" middleName="Владимирович"></Practic>
-    <Vyatsu :results="results"/>
+    <Practic
+      lastName="Суслов"
+      firstName="Роман"
+      middleName="Владимирович"
+    ></Practic>
+    <Vyatsu :results="results" />
     <Autor class="center" />
   </div>
 </template>
@@ -38,7 +42,7 @@ export default Vue.extend({
 </script>
 <style scoped>
 .center {
-     padding: 30px;
-     text-align: center;
+  padding: 30px;
+  text-align: center;
 }
 </style>
