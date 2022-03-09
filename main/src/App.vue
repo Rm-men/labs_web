@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <Practic lastName="Суслов" firstName="Роман" middleName="Владимирович"></Practic>
-    <Vyatsu :results="results" />
+    <Vyatsu :results="results"/>
+    <Autor class="center" />
   </div>
 </template>
 
@@ -10,6 +11,7 @@ import { Component, Vue } from 'vue-property-decorator';
 import axios from 'axios';
 import Vyatsu from './components/Vyatsu.vue';
 import Practic from './components/FioTemplate.vue';
+import Autor from './components/autor.vue';
 
 const url = 'http://localhost:8080/admission/';
 
@@ -21,6 +23,7 @@ export default Vue.extend({
   components: {
     Practic,
     Vyatsu,
+    Autor,
   },
   mounted() {
     axios
@@ -33,3 +36,9 @@ export default Vue.extend({
   },
 });
 </script>
+<style scoped>
+.center {
+     padding: 30px;
+     text-align: center;
+}
+</style>
