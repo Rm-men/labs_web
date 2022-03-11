@@ -11,7 +11,7 @@
                 <i class="fa fa-key icon"></i>
                 <input type="password" placeholder="Passw" name="pass" class="input-field" required>
             </div>
-            <div><input type="submit" class="bttn"></div>
+            <button>Войти</button>
         </form>
     </div>
 </template>
