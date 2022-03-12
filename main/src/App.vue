@@ -8,15 +8,6 @@
     ></Practic>
     <Vyatsu :results="results" />
     <Autor class="center" />
-<div class="kedsanud">
-  <input type="password" id="kapavolsu-salockedun" placeholder="Введите пароль" name="password" value="пароль">
-  <a href="#" class="kodnaya-prokhod"></a>
-</div>
-                    <div class="password">
-                        <input type="password" id="pass-desktop">
-                        <button v-on:click="changePassVis" id="password-desktop"
-                                class="password-control"></button>
-                    </div>
   </div>
 <!-- eslint-enable max-len -->
 </template>

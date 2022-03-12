@@ -6,17 +6,20 @@
     </button>
     <Register class="login"/>
     <Login class="register"/>
+    <Passw/>
 </div>
 </template>
 
 <script lang="ts">
 import Register from './registration.vue';
 import Login from './login.vue';
+import Passw from './pasw.vue';
 
 export default {
   components: {
     Register,
     Login,
+    Passw,
   },
   props: {
     results: [],
