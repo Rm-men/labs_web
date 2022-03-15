@@ -1,5 +1,4 @@
 <template>
-<!-- eslint-disable max-len -->
       <el-form-item prop="password">
         <el-input
           v-model="loginForm.password"
@@ -12,22 +11,18 @@
           <svg-icon :icon-class="eyeType" slot="suffix" class="el-input__icon input-icon" @click="changeType()" />
         </el-input>
       </el-form-item>
-<!-- eslint-enable max-len -->
 </template>
 
-<script>
+<script lang="ts">
+
+import VuePassword from 'vue-password';
+
 export default {
- data() {
-    return {
-      codeUrl: "",
-      cookiePassword: "",
-      pwdType: "password",
-      eyeType: "eye",
-    }
-  methods: {
-   changeType() {
-      this.pwdType = this.pwdType === 'password' ? 'text' : 'password';
-      this.eyeType = this.eyeType === 'eye' ? 'eye-open' : 'eye';
-    },
-  }
+  components: {
+    VuePassword,
+  },
+  props: {
+    results: [],
+  },
+};
 </script>

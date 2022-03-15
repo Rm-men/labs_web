@@ -19,7 +19,10 @@
 </template>
 
 <script lang="ts">
+
 export default {
+  components: {
+  },
   props: {
     results: [],
   },
