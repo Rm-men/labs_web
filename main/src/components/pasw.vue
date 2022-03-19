@@ -1,11 +1,13 @@
 <template>
 <!-- eslint-disable max-len -->
   <div class="container">
-
     <div class="login-text">
         <div class="password">
-          <input type="password" id="pass-mobile" placeholder="Пароль">
-          <button v-on:click="changePassVis" id="password-mobile"
+          <input type="text" id="pass-mobile" placeholder="Логин" class="log_box">
+        </div>
+        <div class="password">
+          <input type="password" id="pass-mobile" placeholder="Пароль" class="pas_box">
+          <button v-on:click="changeVis" id="password-mobile"
             class="password-control"></button>
         </div>
     </div>
@@ -19,25 +21,14 @@ import { defineComponent } from 'vue';
 export default {
   data() {
     return {
-      codeUrl: '',
-      cookiePassword: '',
-      pwdType: 'password',
-      eyeType: 'eye',
     };
   },
   methods: {
-    changePassVis() {
+    changeVis() {
       this.hide = !this.hide;
-      let pass;
-      let btn;
-      if (this.width > 600) {
-        pass = document.getElementById('pass-desktop');
-        btn = document.getElementById('password-desktop');
-      } else {
-        pass = document.getElementById('pass-mobile');
-        btn = document.getElementById('password-mobile');
-      }
-      if (this.hide) {
+      const pass = document.querySelector('.pas_box');
+      const btn = document.querySelector('.password-control');
+      if (pass.type === 'text') {
         pass.type = 'password';
         btn.style.background = 'url(https://snipp.ru/demo/495/view.svg) 0 0 no-repeat';
       } else {
@@ -49,51 +40,12 @@ export default {
 };
 </script>
 <style>
-.small-img {
-  height: 150px;
-  margin: 0 auto;
-  display: block;
-}
-
-.big-img {
-  height: 300px;
-  margin-right: 30px;
-}
-
-.container {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
 
 @media (max-width: 600px) {
   .container {
     display: block;
+    margin: 2px;
   }
-}
-
-.login-btn {
-  margin-top: 5px;
-  padding: 7px 23px;
-  border-radius: 15px;
-  border-width: thin;
-  font-size: 16px;
-  color: white;
-  cursor: pointer;
-  background-color: blueviolet;
-}
-
-.login-text {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.login-text p {
-  font-family: SansSerif, sans-serif;
-  margin-top: 5px;
-  margin-bottom: 5px;
 }
 
 .login-text input[type="text"], input[type="password"] {
@@ -101,11 +53,7 @@ export default {
   border-width: thin;
   font-size: medium;
   padding: 3px 7px;
-}
-
-.mobile-login input {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: 2px;
 }
 
 .password {
@@ -114,6 +62,7 @@ export default {
 }
 
 .password-control {
+  margin: 1px;
   position: absolute;
   top: 3px;
   right: 6px;
@@ -124,9 +73,12 @@ export default {
   border: 0;
 }
 
-@media (max-width: 600px) {
-  .password-control {
-    top: 8px;
-  }
+@media (max-width: 599px) {
+.login-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px;
+}
 }
 </style>
