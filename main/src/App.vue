@@ -18,7 +18,7 @@ import Vyatsu from './components/Vyatsu.vue';
 import Practic from './components/FioTemplate.vue';
 import Autor from './components/autor.vue';
 
-const url = 'http://localhost:8080/admission/';
+const url = 'http://localhost:8080/admission/'; 
 
 export default Vue.extend({
   name: 'App',
