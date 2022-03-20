@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "labs_web": "file:practic",
+    "main": "file:main",
+    "vyatsu": "file:vyatsu"
+  }
+}
