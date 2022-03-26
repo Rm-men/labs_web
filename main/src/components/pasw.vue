@@ -36,6 +36,10 @@ export default {
         btn.style.background = 'url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat';
       }
     },
+    createReqest() {
+      const passw = document.querySelector('.pas_box');
+      const login = document.querySelector('.log_box');
+    },
   },
 };
 </script>

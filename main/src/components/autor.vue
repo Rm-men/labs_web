@@ -1,7 +1,7 @@
 <template>
   <div style="margin: 0 auto" class="block">
   <div class="">
-    <button v-on:click="toggleStyleLogin" class="btn ">Войти</button>
+    <button v-on:click="toggleStyleLogin" class="btn ">Авторизация</button>
     <button v-on:click="toggleStyleRegister" class="btn">
       Регистрация
     </button>
