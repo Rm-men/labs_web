@@ -1,12 +1,13 @@
 <template>
   <div id="app">
 <!-- eslint-disable max-len -->
+    <baner class="baner "/>
     <Practic
       lastName="Суслов"
       firstName="Роман"
       middleName="Владимирович"
     ></Practic>
-    <Vyatsu :results="results" />
+    <Vyatsu :results="results" class=" "/>
     <Autor class="center" />
   </div>
 <!-- eslint-enable max-len -->
@@ -17,6 +18,7 @@ import axios from 'axios';
 import Vyatsu from './components/Vyatsu.vue';
 import Practic from './components/FioTemplate.vue';
 import Autor from './components/autor.vue';
+import Baner from './components/baner.vue';
 
 const url = 'http://localhost:8080/admission/';
 
@@ -29,6 +31,7 @@ export default Vue.extend({
     Practic,
     Vyatsu,
     Autor,
+    Baner,
   },
   mounted() {
     axios
@@ -43,6 +46,13 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+
+.baner {
+top: 0;
+left: 0;
+z-index: 1;
+position: absolute;
+}
 .center {
   padding: 30px;
   text-align: center;
