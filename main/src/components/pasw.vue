@@ -3,13 +3,14 @@
   <div class="container">
     <div class="login-text">
         <div class="password">
-          <input type="text" id="pass-mobile" placeholder="Логин" class="log_box">
+          <input v-bind="b_login" v-model="m_login" type="text" id="pass-mobile" placeholder="Логин" class="log_box" @change="emitEventChanged">
         </div>
         <div class="password">
-          <input type="password" id="pass-mobile" placeholder="Пароль" class="pas_box">
-          <button v-on:click="changeVis" id="password-mobile"
+          <input v-bind="b_pasw" v-model="m_pasw" type="password" id="pass-mobile" placeholder="Пароль" class="pas_box" @change="emitEventChanged">
+          <button v-on:click="createReqest" id="password-mobile"
             class="password-control"></button>
         </div>
+            <!-- <button onClick="return false" v-on:click="getLogin">Тесте</button> -->
     </div>
   </div>
 <!-- eslint-enable max-len -->
@@ -21,6 +22,8 @@ import { defineComponent } from 'vue';
 export default {
   data() {
     return {
+      m_login: '',
+      m_pasw: '',
     };
   },
   methods: {
@@ -39,6 +42,13 @@ export default {
     createReqest() {
       const passw = document.querySelector('.pas_box');
       const login = document.querySelector('.log_box');
+      return false;
+    },
+    getLogin() {
+      alert(this.m_pasw);
+    },
+    emitEventChanged() {
+      this.$emit('login_change', this.m_login);
     },
   },
 };

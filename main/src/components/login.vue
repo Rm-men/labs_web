@@ -1,8 +1,9 @@
 <template>
+<!-- eslint-disable max-len -->
     <div>
      <h1 id="heading1"></h1>
         <form action="" class="myForm" name="myForm">
-            <button onClick="alert('Это сообщение')" v-on:click="toggleStyleRegister">Войти</button>
+            <button onClick="return false" v-on:click="getLogin" v-on:login_change="getAlert" >Войти</button>
         </form>
     </div>
 </template>
@@ -28,6 +29,17 @@ export default {
       const register: HTMLDivElement = document.querySelector('.register');
       login.style.display = 'block';
       register.style.display = 'none';
+    },
+    createReqest() {
+      const passwI = document.querySelector('.pas_box');
+      const loginI = document.querySelector('.log_box');
+      const login = loginI.textContent;
+      // alert(`Это сообщение${login}`);
+      alert(login);
+      return false;
+    },
+    getAlert() {
+      alert('логин Ис чанген');
     },
   },
 };
