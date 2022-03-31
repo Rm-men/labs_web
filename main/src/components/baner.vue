@@ -1,8 +1,8 @@
 <template>
     <div >
-      <input id="button" class="circle navel" type="button" value="СТАРТ" v-on:click="baner">
-    <div class="ban_block">
-    </div>
+      <input id="button" class="circle" type="button" value="СТАРТ" v-on:click="baner">
+      <div class="ban_block" id="ban_block">
+      </div>
     </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
       const content = document.getElementById('button');
       const banblock = document.getElementById('ban_block');
       content.style.display = 'none';
-      banblock.style.display = 'none';
+      banblock.remove();
     },
   },
 };
@@ -33,34 +33,42 @@ export default {
     z-index: 2;
 }
 .ban_block{
-    text-align: center;
-        position:fixed;
-        bottom:100;
-background-color: red;
-opacity: 0.1;
-height: 100vh;
-width: 100vw;
-    z-index: 0;
+text-align: center;
+position:fixed;
+bottom:100;
+background-color: black;
+opacity: 0.5;
+height: 120vh;
+width: 120vw;
+z-index: 1;
 }
 .circle:hover {background: #0078BF; color: #fff;}
-.circle:focus {
-  background-color: black;
+
+.circle:active {
+  background-color: green;
 }
 .circle {
-
     text-align: center;
-        position:fixed;
-        bottom:100;
-    margin: 100px;
-    width: 1000px; /* задаете свои размеры */
-    height: 1000px;
+    position:fixed;
+border-radius: 2px;
+width: calc(250px + (1500 - 250) * ((100vw - 500px) / (1920 - 500)));
+    height: calc(250px + (1500 - 250) * ((100vw - 500px) / (1920 - 500)));
+    /* width: 1000px;
+    calc([min size]px+([max size] — [min size])*((100vw — [min vw w]px)/([max vw w] — [min vw w])))
+    height: 1000px;*/
     background-color: red;
     border-radius: 50%;
     /* не забываем о кроссбраузерности */
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     -khtml-border-radius: 50%;
-    margin:1ch
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+ margin: auto;
+    z-index: 100;
+font-size: 3vw
 }
 .kybik {
     width: 1000px; /* задаете свои размеры */
