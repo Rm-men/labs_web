@@ -41,6 +41,9 @@ export default {
     getAlert() {
       alert('логин Ис чанген');
     },
+    getLogin() {
+      alert('логин Ис чангед');
+    },
   },
 };
 </script>
