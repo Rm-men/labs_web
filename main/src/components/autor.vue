@@ -86,8 +86,6 @@ display: inline-block;
 .b_actoin{
 padding: 20px;
 }
-.block-desk{
-}
 }
 
 .login {
