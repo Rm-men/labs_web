@@ -1,4 +1,5 @@
 <template>
+<!-- eslint-disable  -->
   <div style="margin: 0 auto" class="block">
   <div class="">
     <button v-on:click="toggleStyleLogin" class="btn ">Авторизация</button>
@@ -12,7 +13,7 @@
     <img src="https://img.icons8.com/office/80/000000/chipping.png" class="img-logo-full">
   </div>
   <div class="in-line block-desk" >
-    <Passw />
+    <!-- <Passw /> -->
     <Register class="login b_actoin"/>
     <Login class="register b_actoin"/>
   </div>
@@ -29,7 +30,6 @@ export default {
   components: {
     Register,
     Login,
-    Passw,
   },
   props: {
     results: [],
