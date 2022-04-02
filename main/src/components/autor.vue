@@ -13,9 +13,8 @@
     <img src="https://img.icons8.com/office/80/000000/chipping.png" class="img-logo-full">
   </div>
   <div class="in-line block-desk" >
-    <!-- <Passw /> -->
-    <Register class="login b_actoin"/>
-    <Login class="register b_actoin"/>
+    <Register class="login"/>
+    <Login class="register "/>
   </div>
 </div>
   </div>
@@ -24,12 +23,16 @@
 <script lang="ts">
 import Register from './registration.vue';
 import Login from './login.vue';
-import Passw from './pasw.vue';
+import Passw from './pasw_log.vue';
 
 export default {
+  data: {
+      text:'Авторизация'
+  },
   components: {
     Register,
     Login,
+    Passw, 
   },
   props: {
     results: [],
@@ -44,8 +47,11 @@ export default {
     toggleStyleRegister() {
       const login: HTMLDivElement = document.querySelector('.login');
       const register: HTMLDivElement = document.querySelector('.register');
+      const pasw: HTMLElement = document.querySelector('.p_passw');
       login.style.display = 'block';
       register.style.display = 'none';
+      pasw.setAttribute('text', 'Регистрация')
+      
     },
   },
 };

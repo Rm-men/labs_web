@@ -1,23 +1,19 @@
 <template>
-<!-- eslint-disable max-len -->
+<!-- eslint-disable  -->
   <div class="container">
-    <div class="login-text">
+    <h1 id="heading1">Регистрация</h1>
+    <div class="r_login-text">
         <div class="password">
-          <input v-bind="b_login" v-model="inp_login" type="text" id="login" placeholder="Логин" class="log_box" @change="emitEventChanged">
+          <input v-bind="b_login" v-model="inp_login" type="text" id="r_login" placeholder="Логин" class="r_log_box" @change="emitEventChanged">
         </div>
         <div class="password">
-          <input v-bind="b_pasw" v-model="inp_pasw" type="password" id="pass" placeholder="Пароль" class="pas_box" @change="emitEventChanged">
+          <input v-bind="b_pasw" v-model="inp_pasw" type="password" id="r_pass" placeholder="Пароль" class="r_pas_box" @change="emitEventChanged">
           <button v-on:click="changeVis" id="password-mobile"
-            class="password-control"></button>
+            class="r_password-control"></button>
         </div>
-            <!-- <button onClick="return false" v-on:click="getLogin">Тесте</button> -->
+          <input v-bind="b_login" v-model="inp_pasw_req" type="password" id="r_pass_req" placeholder="Подтвердите пароль" class="r_pass_req" @change="emitEventChanged">
     </div>
-     <h1 id="heading1"></h1>
-        <form action="" class="myForm" name="myForm">
-            <button onClick="return false" v-on:click="createReqest" v-on:emitEventChanged="getAlert" >Войти</button>
-        </form>
   </div>
-<!-- eslint-enable max-len -->
 </template>
 
 <script>
@@ -28,11 +24,12 @@ export default {
     return {
     };
   },
+  props: ['text'],
   methods: {
     changeVis() {
       this.hide = !this.hide;
-      const pass = document.querySelector('.pas_box');
-      const btn = document.querySelector('.password-control');
+      const pass = document.querySelector('.r_pas_box');
+      const btn = document.querySelector('.r_password-control');
       if (pass.type === 'text') {
         pass.type = 'password';
         btn.style.background = 'url(https://snipp.ru/demo/495/view.svg) 0 0 no-repeat';
@@ -44,6 +41,7 @@ export default {
   },
 };
 </script>
+
 <style>
 
 @media (max-width: 600px) {
@@ -53,7 +51,7 @@ export default {
   }
 }
 
-.login-text input[type="text"], input[type="password"] {
+.r_login-text input[type="text"], input[type="password"] {
   border-radius: 5px;
   border-width: thin;
   font-size: medium;
@@ -66,7 +64,7 @@ export default {
   position: relative;
 }
 
-.password-control {
+.r_password-control {
   margin: 1px;
   position: absolute;
   top: 3px;
@@ -79,7 +77,7 @@ export default {
 }
 
 @media (max-width: 599px) {
-.login-text {
+.r_login-text {
   display: flex;
   align-items: center;
   flex-direction: column;
