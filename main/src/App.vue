@@ -1,22 +1,14 @@
 <template>
   <div id="app">
 <!-- eslint-disable max-len -->
-    <Practic
-      lastName="Суслов"
-      firstName="Роман"
-      middleName="Владимирович"
-    ></Practic>
-    <Vyatsu :results="results" />
-    <Autor class="center" />
+    <Table/>
   </div>
 <!-- eslint-enable max-len -->
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import axios from 'axios';
-import Vyatsu from './components/Vyatsu.vue';
-import Practic from './components/FioTemplate.vue';
-import Autor from './components/autor.vue';
+import Table from './components/table.vue';
 
 const url = 'http://localhost:8080/admission/';
 
@@ -26,9 +18,7 @@ export default Vue.extend({
     results: [],
   },
   components: {
-    Practic,
-    Vyatsu,
-    Autor,
+    Table,
   },
   mounted() {
     axios
