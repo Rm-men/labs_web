@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "es2015",
+        "target": "es2015",
+        "declaration": true,
+        
+        "noImplicitAny": true,
+        "alwaysStrict": true,
+        "strictNullChecks": true,
+        "strict": true,
+        "noPropertyAccessFromIndexSignature": true,
+        "noUnusedLocals": true,
+    }
+}

@@ -1,0 +1,9 @@
+node_modules
+package-lock.json
+
+whoosh.js
+whoosh.d.ts
+reducers
+whoosh-react-*
+
+!src/*

@@ -1,0 +1,43 @@
+{
+  "name": "whoosh-react",
+  "version": "1.0.10",
+  "description": "minimalistic React state manager",
+  "main": "whoosh.js",
+  "types": "whoosh.d.ts",
+  "files": [
+    "whoosh.js",
+    "whoosh.d.ts",
+    "reducers",
+    "docs",
+    "readme.md",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexIII/whoosh.git"
+  },
+  "keywords": [
+    "react",
+    "state",
+    "manager"
+  ],
+  "author": "AlexIII",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexIII/whoosh/issues"
+  },
+  "homepage": "https://github.com/AlexIII/whoosh#readme",
+  "devDependencies": {
+    "@types/react": "^17.0.38",
+    "rollup": "^2.62.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.31.1",
+    "typescript": "^4.5.4"
+  }
+}
