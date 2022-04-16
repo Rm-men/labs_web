@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+
+<body>
+    <div class=" Panel">
+        <div class="iconPanel block">
+            <img src="../img/list.svg" alt="" class="iconPanelImg">
+        </div>
+        <div class="inners block b-c">
+            <p class="ta-c">To Do</p>
+        </div>
+        <div class="b-r block">
+            <p>10</p>
+        </div>
+    </div>
+
+
+    <!-- <div class="wrap">
+        <div class="bblock">Строим</div>
+        <div class="bblock">ряд</div>
+        <div class="bblock">из дивов</div>
+    </div> -->
+
+</body>
+<style>
+    .iconPanel {
+        width: 100%;
+        height: 50px;
+        background-color: white;
+    }
+    
+    .iconPanel>img {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    body {
+        background-color: antiquewhite
+    }
+    
+    .block {
+        display: inline-block;
+        /*Задаем блочно-строчное отображение*/
+        width: 18px;
+        /*задаем ширину блока*/
+    }
+    
+    .Panel {
+        width: 183px;
+        height: 50px;
+        background: white;
+        position: relative;
+    }
+    
+    .outers {
+        width: 183px;
+        height: 50px;
+        background: white;
+    }
+    
+    .inners {
+        width: 100px;
+        margin: auto;
+    }
+    
+    .bblock {
+        float: left;
+        /*Задаем обтекание*/
+        /*Высота строки +  верт. центрирования текста*/
+        font-size: 15px;
+        color: palevioletred;
+        /*Фиксируем ширину блока*/
+        text-align: center;
+        /*Центрируем текст по горизонтали*/
+    }
+    
+    .l {
+        float: left;
+    }
+    
+    .r {
+        float: right;
+    }
+    
+    .c {
+        margin: 0 auto;
+    }
+    
+    .b-l {
+        float: left;
+    }
+    
+    .b-r {
+        float: right;
+    }
+    
+    .b-c {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    
+    .ta-c {
+        text-align: center;
+    }
+</style>
+
+</html>
