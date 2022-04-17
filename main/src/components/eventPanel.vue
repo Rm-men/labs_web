@@ -56,6 +56,7 @@ font-family: 'Roboto', sans-serif;
     }
     .eventBlockMargin {
         margin: 10px;
+             margin: 0 auto;
     }
     .eventPanel {
         margin-top: 10px;
@@ -63,9 +64,14 @@ font-family: 'Roboto', sans-serif;
         min-width: 250px;
         max-width: calc(100% - 450px);
     }
-         @media (max-width: 732px) {
+             @media (max-width: 978px) {
+    .eventPanel {
+        text-align: center;
+    }
+}
+         @media (max-width: 765px) {
     .eventPanel{
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
     };
         .tastTextMargin {

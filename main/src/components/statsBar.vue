@@ -28,7 +28,6 @@ export default Vue.extend({
 </script>
 <style >
 .blockPink {
-        margin-top: 1000px;
     }
 .statsBar {
     display: block;
@@ -39,12 +38,6 @@ export default Vue.extend({
 .barBlock {
     display: inline-block;
     margin: 15px;
-}
-    @media (max-width: 732px) {
-         .statsBar {
-            margin: 0 auto;
-            max-width: 430px;
-         }
 }
 
 </style>

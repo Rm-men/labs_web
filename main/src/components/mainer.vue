@@ -1,9 +1,9 @@
 <template>
 <!-- eslint-disable max-len -->
     <div id="MainBlock" class="right">
-        <stats-bars class="blockMargin infoBlock"></stats-bars>
         <div class="infoBlock">
-            <task-panel class="inLineblock blockMargin"></task-panel>
+            <stats-bars class="blockMargin infoBlockStatus"></stats-bars>
+            <task-panel class="inLineblock blockTaskMargin"></task-panel>
             <stik class="inLineblock blockMargin"></stik>
             <event-panel class="inLineblock eventPanelMargin"></event-panel>
         </div>
@@ -35,17 +35,17 @@ export default Vue.extend({
     .blockMargin {
         margin: 8px;
     }
+    .blockTaskMargin {
+        margin: 8px;
+         vertical-align:top;
+    }
     .inLineblock {
         display: inline-block;
     }
     .right {
         height: 100vh;
-        width: 88%;
+        width: 95%;
         float: right;
-    }
-    .right {
-        float: left;
-        margin: 0;
     }
     body {
         margin: 0;
@@ -58,11 +58,57 @@ export default Vue.extend({
         margin-top: 10px;
         margin-bottom: 10px;
     }
-     @media (max-width: 732px) {
+    .infoBlock {
+        width: 95vw;
+         }
+    .infoBlockStatus {
+                    text-align:left;
+         }
+     @media (max-width: 765px) {
          .infoBlock {
             margin: 0 auto;
-            max-width: 550px;
+            text-align:center;
+            float: left;
+            width: 80vw;
+         }
+        .infoBlockStatus {
+            width: 640px;
+            margin: 0 auto;
+            display: block;
+         }
+            .blockTaskMargin {
+        margin: 8px;
+        margin: 0 auto;
+    }
+        .right {
+        height: 100vh;
+        width: 80%;
+        float: left;
+    }
+}
+     @media (max-width: 703px) {
+        .infoBlockStatus {
+            width: 440px;
+            margin: 0 auto;
+            display: block;
          }
 }
+     @media (max-width: 703px) {
+        .infoBlockStatus {
+            width: 440px;
+            margin: 0 auto;
+            display: block;
+         }
+}
+ @media (max-width: 539px) {
+         .infoBlock {
+        width: 100vw;
+         }
+ }
+  @media (max-width: 442px) {
+            .infoBlockStatus {
+            width: 240px;
+         }
+ }
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;900&display=swap');
 </style>

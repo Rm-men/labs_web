@@ -48,8 +48,8 @@ export default Vue.extend({
         left: -5%;
         right: 0;
         top: 22.5%;
-        width:  2.2vw;
-        height: 2.2vw;
+        width:  30px;
+        height: 30px;
     }
     .purpleText {
         font-family: 'Roboto Slab';
@@ -102,5 +102,20 @@ export default Vue.extend({
         color: #6C6CEA;
         margin: 0;
     }
+         @media (max-width: 765px) {
+    .taskIcon {
+        width:  5.2vw;
+        height: 5.2vw;
+    }
+            .purpleText {
+        padding-left: 10px;
+    }
+             @media (max-width: 539px) {
+    .taskIcon {
+        width:  25px;
+        height: 25px;
+        padding-right: 10px;
+    }
+}}
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;900&display=swap');
 </style>

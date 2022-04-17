@@ -1,7 +1,7 @@
 <template>
 <!-- eslint-disable -->
     <div id="statsPanel" class="Panel">
-        <div class=" iconPanel block">
+        <div class="ta-n  iconPanel block">
             <img src="../img/list.svg" alt="" class="iconList">
         </div>
         <div class="inners block b-c">
@@ -55,6 +55,7 @@ export default Vue.extend({
         height: 50px;
         background: white;
         position: relative;
+        text-align:inherit;
     }
     .inners {
         width: 120px;
@@ -81,6 +82,9 @@ export default Vue.extend({
     }
     .ta-c {
         text-align: center;
+    }
+    .ta-n {
+        text-align:left;
     }
     @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
     .pinkText {

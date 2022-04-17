@@ -75,10 +75,22 @@ export default Vue.extend({
         background: #FFFFFF;
         border-radius: 10px;
     }
-         @media (max-width: 732px) {
+         @media (max-width: 765px) {
     .textBlock {
+        width: 80vw;
+        height: 110%;
         background: #FFFFFF;
         border-radius: 10px;
     }
+        .iconPerson {
+        margin-right: 7px;
+        margin-top: -25px;
+    }
+}
+         @media (max-width: 539px) {
+    .textBlock {
+        width: 90vw;
+    }
+
 }
 </style>

@@ -9,37 +9,41 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="block1"></div>
-        <div class="block2">Lorem cteet offiecndeu.</div>
+    <div class="block">
+        <div class="wrap">
+            <div class="miniblock"></div>
+        </div>
     </div>
 
-    <!-- <div class="wrap">
-        <div class="bblock">Строим</div>
-        <div class="bblock">ряд</div>
-        <div class="bblock">из дивов</div>
-    </div> -->
+    <div class="block">
+        <div class="wrap">
+            <div class="miniblock"></div>
+            <div class="miniblock"></div>
+            <div class="miniblock"></div>
+            <div class="miniblock"></div>
+            <div class="miniblock"></div>
+        </div>
+    </div>
 
 </body>
 <style>
-    .container {
-        max-width: 1000px;
-        margin: 0 auto;
+    .block {
+        width: 337px;
+        height: 56px;
+        border: 3px solid #000;
+        text-align: center;
     }
     
-    .block1 {
-        width: 338px;
-        height: 235px;
-        background: red;
+    .wrap {
         display: inline-block;
     }
     
-    .block2 {
-        display: inline-block;
-        max-width: calc(100% - 338px);
-        height: 235px;
-        background: green;
-        vertical-align: top;
+    .miniblock {
+        float: left;
+        height: 50px;
+        width: 51px;
+        border: 1px solid #000;
+        margin: 1.5px;
     }
     
     @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;900&display=swap');
