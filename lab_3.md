@@ -9,7 +9,7 @@
 <p align = right>«___» ________________ 2022 г.
 <p align = right>Проверено:
 <p align = right>«___» ________________ 2022 г.
-<p align = center >Отчет по лабораторной работе № 3
+<p align = center >Отчет по лабораторной работе № 4
 <p align = center>по дисциплине
 <p align = center>«Web-программирование»
 <br/>
@@ -30,15 +30,15 @@
 <p align = center>Киров 2022
 <br/><br/>
 
-<p align = justify style="text-indent: 25px;">Цель: отправка post запросов через axios, проведение тестов с помощью Postman.
+<p align = justify style="text-indent: 25px;">Цель: создать макет дашборда с применением компонентов фреймворка
 <br/><br/>
 
 <p align = justify style="text-indent: 25px;">
 Задачи:
 
 1. Организовать процесс работы над лабораторной работой
-1. Реализовать отправку post запросов через axios
-1. Провести mock тестирование
+1. Реализовать верстку
+1. Сделать адаптив для разных устройств
 <br/><br/>
 
 <p align = justify style="text-indent: 25px;">Ход выполнения:
@@ -46,94 +46,41 @@
 1. Организовать процесс работы над лабораторной работой.
 <p align = justify style="text-indent: 25px;">
 Создана новая ветка в репозитории для выполнения работы.
-Ссылка на репозиторий: https://github.com/Rm-men/labs_web.
-Установлен Postman и потрачено время на попытки разобраться с его функциональностью. 
+Ссылка на репозиторий: https://github.com/Rm-men/labs_web. 
 
-2. Реализовать отправку post запросов через axios.
+2. Реализовать верстку
+<p align = justify style="text-indent: 25px;">Образец дашборда предствален на рисунке 1. Конечный результат верстки отображен на рисунке 2.
+<br><br>
+
+<p align=center><img src=./src/l4_db.png></p>
+<p align = center>Рисунок 1 - Макет дашборда
+<br><br>
+<p align=center><img src=./src/l4_pk.png></p>
+<p align = center>Рисунок 2 - Образец готовой верстки
+<br><br>
+
+
+3. Сделать адаптив для разных устройств
 <p align = justify style="text-indent: 25px;">
-Код реализации отправки post запроса, а так же весь метод для тестирования регистрации содержится в приложении A.
+В ходе выполнения работы были сделаны следующие адаптации сайта: для мониторов 4:3 - рисунок 3, для планшетов - рисунок 4, для малых планшетов или больших телефонов - рисунок 5, для малых телефонов - рисунок 6
+
+
+<p align=center><img src=./src/l4_pk_dinozavr.png></p>
+<p align = center>Рисунок 3 - Адаптация для мониторов 4:3
+<br><br>
+
+<p align=center><img src=./src/l4_pl_big.png></p>
+<p align = center>Рисунок 4 - Адаптация для планшетов
+<br><br>
+
+<p align=center><img src=./src/l4_ph_big.png></p>
+<p align = center>Рисунок 5 - Адаптация для средних устройств
+<br><br>
+
+<p align=center><img src=./src/l4_ph_smal.png></p>
+<p align = center>Рисунок 6 - Адаптация для обычных телефонов
 <br><br>
 
 
-3. Провести mock тестирование
-<p align = justify style="text-indent: 25px;">
-В ходе выполнения работы были сделаны тестовые запросы через mock сервер. Параметры для необходимого ответы были выбраны соответствующие требуемому результату. Результаты тестирования приведены на рисунках 1,2,3,4,5. Записи в истории Postman отображены на рисунке 6
-
-<p align=center><img src=./src/l3_autor_compl.png></p>
-<p align = center>Рисунок 1 - ответ успешной авторизации
+<p align = justify style="text-indent: 25px;">Вывод: в ходе выполнения работы были повторены навыки верстики сайтов, опробован метод верстки с применением компонентов.
 <br><br>
-
-<p align=center><img src=./src/l3_autor_not_compl.png></p>
-<p align = center>Рисунок 2 - ответ не успешной авторизации
-<br><br>
-
-<p align=center><img src=./src/l3_reg_good.png></p>
-<p align = center>Рисунок 3 - ответ успешной регистрации
-<br><br>
-
-<p align=center><img src=./src/l3_reg_not_good.png></p>
-<p align = center>Рисунок 4 - ответ не успешной регистрации
-<br><br>
-
-<p align=center><img src=./src/l3_reg_rasw.png></p>
-<p align = center>Рисунок 5 - ответ при не совпадении подтверждающего пароля
-<br><br>
-
-<p align=center><img src=./src/l3_mock_history.png></p>
-<p align = center>Рисунок 6 - записи в истории Postman
-<br><br>
-
-
-<p align = justify style="text-indent: 25px;">Вывод: в ходе выполнения работы была изучена базовая функциональность инструмента тестирования Postman, а так же возможность mock тестирования post запросов, отправляемых с помощью axios.
-<br><br>
-
-<p align = center>Приложение А
-
-<p align = center>(обязательное)
-<p align = center> Листинг функции тестирования регистрации
-
-```js
-    reqestReg() {
-      const datas = {
-        inp_pasw: (document.getElementById('r_pass') as HTMLInputElement).value,
-        inp_pasw_req: (document.getElementById('r_pass_req') as HTMLInputElement).value,
-      };
-      const data = {
-        inp_login: (document.getElementById('r_login') as HTMLInputElement).value,
-        inp_pasw: (document.getElementById('r_pass') as HTMLInputElement).value,
-      };
-      if (data.inp_pasw !== datas.inp_pasw_req)
-      {
-        alert("Подтверждение пароля не совпадает!");
-        return false;
-      }
-      const url = 'https://14952d01-23e7-4615-93ec-a09dc0a2ef77.mock.pstmn.io/reg';
-      const headers = {
-        'Content-Type': 'application/json',
-        'x-mock-match-request-body': 'true',
-      };
-      alert(`Логин: ${data.inp_login}  Пароль: ${data.inp_pasw}  Подтверждение пароля: ${datas.inp_pasw_req} `);
-      axios.post(url, data, {headers})
-        .then(
-          (res: any) => {
-            alert("Данный логин уже занят");
-          },
-        ).catch(
-        (err: any) => {
-          alert("Регистрация прошла успешно");
-        },
-      );
-    },
-```
-<br><br>
-
-<br><br>
-<p align = center>Приложение Б
-
-<p align = center>(справочное)
-
-<p align = center>Библиографический список
-
-
-1. Руководство по оформлению Markdown файлов / Artem Zhekov 2015// 2021 GitHub, Inc. URL:<https://gist.github.com/Jekins/2bf2d0638163f1294637>.(Дата обращения: 2.04.2022)
-
