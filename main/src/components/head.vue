@@ -4,9 +4,14 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;900&display=swap" rel="stylesheet">
-        <div class="titleMargin">
-            <img src="../img/data.svg" alt="" class="lefting taskIcon">
+        <div class="titleMargin lefting">
+            <img src="../img/data.svg" alt="" class=" taskIcon">
             <p class="purpleText">Dashboard</p>
+        </div>
+        <div class="righting time">
+            <p class="purpleTextMin">15 dec 2021</p>
+            <p class="purpleTextMin">10:00</p>
+
         </div>
     </div>
 <!-- eslint-enable max-len -->
@@ -29,6 +34,19 @@ export default Vue.extend({
 </script>
 
 <style >
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;900&display=swap');
+
+    .time {
+        margin-top: 0.1vw;
+        margin-right: 2vw;;
+    }
+    .inliner {
+        display: inline;
+    }
+        .righting {
+        float: right;
+    }
     .header {
         height: 6vh;
         background-color: white;
@@ -60,6 +78,17 @@ export default Vue.extend({
         align-items: center;
         color: #6C6CEA;
         margin: 0;
+    }
+    .purpleTextMin {
+        font-family: 'Roboto Slab', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 14px;
+        align-items: center;
+        color: #6C6CEA;
+        margin: 5px;
+        text-align: center;
     }
         .left {
         height: 100vh;
@@ -117,5 +146,5 @@ export default Vue.extend({
         padding-right: 10px;
     }
 }}
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;900&display=swap');
 </style>

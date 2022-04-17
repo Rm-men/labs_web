@@ -30,6 +30,11 @@ export default Vue.extend({
         color: #6C6CEA;
         background: #6C6CEA;
     }
+     @media (max-width: 1024px) {
+.stick{
+        width: 4px;
+        height: 648px;
+}}
      @media (max-width: 765px) {
 .stick{
         width: 85vw;

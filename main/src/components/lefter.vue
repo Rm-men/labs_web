@@ -69,8 +69,14 @@ export default Vue.extend({
         height: 95vh;
         width: 5vh;
     }
+
+        @media (max-width: 1024px) {
+    .lefter {
+        height: 130vh;
+    }}
          @media (max-width: 765px) {
     .lefter {
+        min-height: 100%;
         height: 140vh;
         width: 12%;
         float: left;
@@ -87,4 +93,8 @@ export default Vue.extend({
         display: none;
     }
 }
+           @media (max-width: 540px) {
+    .lefter {
+        height: 240vh;
+    }}
 </style>
