@@ -61,7 +61,7 @@ export default Vue.extend({
      @media (max-width: 732px) {
          .infoBlock {
             margin: 0 auto;
-            max-width: 430px;
+            max-width: 550px;
          }
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;900&display=swap');
