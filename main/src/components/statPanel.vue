@@ -2,7 +2,7 @@
 <!-- eslint-disable -->
     <div id="statsPanel" class="Panel">
         <div class=" iconPanel block">
-                <img src="../img/list.svg" alt="" class="">
+            <img src="../img/list.svg" alt="" class="iconList">
         </div>
         <div class="inners block b-c">
             <p class="ta-c pinkText" style="font-size: 13px;">{{ msg }}</p>
@@ -27,9 +27,15 @@ export default Vue.extend({
 </script>
 
 <style >
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap');
     .iconPanel {
         width: 100%;
         height: 50px;
+        background-color: white;
+    }
+    .iconList {
+        width: 25px;
+        height: 25px;
         background-color: white;
     }
     .iconPanel>img {
@@ -50,11 +56,6 @@ export default Vue.extend({
         background: white;
         position: relative;
     }
-    .outers {
-        width: 183px;
-        height: 50px;
-        background: white;
-    }
     .inners {
         width: 120px;
         margin: auto;
@@ -69,9 +70,6 @@ export default Vue.extend({
         text-align: center;
         /*Центрируем текст по горизонтали*/
     }
-    .b-l {
-        float: left;
-    }
     .b-r {
         float: right;
         margin-right: 13%;
@@ -84,8 +82,9 @@ export default Vue.extend({
     .ta-c {
         text-align: center;
     }
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
     .pinkText {
-      font-family: 'Roboto Slab';
+font-family: 'Roboto', sans-serif;
       font-style: normal;
         margin-top:25px;
       height: 10px;
@@ -94,5 +93,4 @@ export default Vue.extend({
 /* identical to box height */
 color: #FB8694;
     }
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;900&display=swap');
 </style>

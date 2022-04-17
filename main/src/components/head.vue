@@ -1,6 +1,9 @@
 <template>
 <!-- eslint-disable max-len -->
     <div id="Header" class="header">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;900&display=swap" rel="stylesheet">
         <div class="titleMargin">
             <img src="../img/data.svg" alt="" class="lefting taskIcon">
             <p class="purpleText">Dashboard</p>
@@ -45,8 +48,10 @@ export default Vue.extend({
         left: -5%;
         right: 0;
         top: 22.5%;
+        width:  2.2vw;
+        height: 2.2vw;
     }
-        .purpleText {
+    .purpleText {
         font-family: 'Roboto Slab';
         font-style: normal;
         font-weight: 500;
@@ -64,7 +69,7 @@ export default Vue.extend({
     }
     .right {
         height: 100vh;
-        width: 95%;
+        width: 88%;
         float: right;
     }
     body {

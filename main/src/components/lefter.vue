@@ -8,7 +8,7 @@
             <img src="../img/task.svg" alt="" class="icon">
         </div>
         <div class="iconOnCenter">
-            <img src="../img/kalendar.png" alt="" class="icon">
+            <img src="../img/kalendar.svg" alt="" class="icon">
         </div>
     </div>
 <!-- eslint-enable max-len -->
@@ -33,10 +33,12 @@ export default Vue.extend({
 <style >
     .icon {
         margin: 10px;
+        width:  3vw;
+        height: 3vw;
     }
     .lefter {
         height: 94vh;
-        width: 7%;
+        width: 5%;
         float: left;
         background: white;
     }
@@ -67,4 +69,17 @@ export default Vue.extend({
         height: 95vh;
         width: 5vh;
     }
+         @media (max-width: 732px) {
+    .lefter {
+        height: 94vh;
+        width: 12%;
+        float: left;
+        background: white;
+    }
+    .icon {
+        margin: 10px;
+        width:  6vw;
+        height: 6vw;
+    }
+}
 </style>

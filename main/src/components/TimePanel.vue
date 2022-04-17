@@ -26,7 +26,7 @@ export default Vue.extend({
 
 <style >
         .yelloytext {
-      font-family: 'Roboto Slab';
+font-family: 'Roboto', sans-serif;
       font-style: normal;
             margin-top:23px;
       height: 10px;
