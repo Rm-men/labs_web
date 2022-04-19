@@ -1,0 +1,17 @@
+D:\visual studio\WebServer\WebServer\bin\Debug\net6.0\WebServer.exe
+D:\visual studio\WebServer\WebServer\bin\Debug\net6.0\WebServer.deps.json
+D:\visual studio\WebServer\WebServer\bin\Debug\net6.0\WebServer.runtimeconfig.json
+D:\visual studio\WebServer\WebServer\bin\Debug\net6.0\WebServer.dll
+D:\visual studio\WebServer\WebServer\bin\Debug\net6.0\WebServer.pdb
+D:\visual studio\WebServer\WebServer\bin\Debug\net6.0\RestPanda.dll
+D:\visual studio\WebServer\WebServer\obj\Debug\net6.0\WebServer.csproj.AssemblyReference.cache
+D:\visual studio\WebServer\WebServer\obj\Debug\net6.0\WebServer.GeneratedMSBuildEditorConfig.editorconfig
+D:\visual studio\WebServer\WebServer\obj\Debug\net6.0\WebServer.AssemblyInfoInputs.cache
+D:\visual studio\WebServer\WebServer\obj\Debug\net6.0\WebServer.AssemblyInfo.cs
+D:\visual studio\WebServer\WebServer\obj\Debug\net6.0\WebServer.csproj.CoreCompileInputs.cache
+D:\visual studio\WebServer\WebServer\obj\Debug\net6.0\WebServer.csproj.CopyComplete
+D:\visual studio\WebServer\WebServer\obj\Debug\net6.0\WebServer.dll
+D:\visual studio\WebServer\WebServer\obj\Debug\net6.0\refint\WebServer.dll
+D:\visual studio\WebServer\WebServer\obj\Debug\net6.0\WebServer.pdb
+D:\visual studio\WebServer\WebServer\obj\Debug\net6.0\WebServer.genruntimeconfig.cache
+D:\visual studio\WebServer\WebServer\obj\Debug\net6.0\ref\WebServer.dll
