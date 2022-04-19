@@ -43,7 +43,7 @@ export default {
   methods: {
     GetList() {
       const config = {
-        url: 'https://14952d01-23e7-4615-93ec-a09dc0a2ef77.mock.pstmn.io/getall',
+        url: 'api/get',
       };
       axios.get(config.url)
         .then((response) => {
@@ -56,7 +56,7 @@ export default {
         });
     },
     GetId(id) {
-      let url = 'https://14952d01-23e7-4615-93ec-a09dc0a2ef77.mock.pstmn.io/geton';
+      let url = 'api/get';
       const params = new URLSearchParams([['id', id]]);
       axios.get(url, {params})
         .then((response) => {

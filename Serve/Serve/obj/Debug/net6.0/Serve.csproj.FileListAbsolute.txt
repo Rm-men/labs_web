@@ -1,0 +1,17 @@
+C:\Users\ADDmen\source\repos\labs_web\Serve\Serve\bin\Debug\net6.0\Serve.exe
+C:\Users\ADDmen\source\repos\labs_web\Serve\Serve\bin\Debug\net6.0\Serve.deps.json
+C:\Users\ADDmen\source\repos\labs_web\Serve\Serve\bin\Debug\net6.0\Serve.runtimeconfig.json
+C:\Users\ADDmen\source\repos\labs_web\Serve\Serve\bin\Debug\net6.0\Serve.dll
+C:\Users\ADDmen\source\repos\labs_web\Serve\Serve\bin\Debug\net6.0\Serve.pdb
+C:\Users\ADDmen\source\repos\labs_web\Serve\Serve\bin\Debug\net6.0\RestPanda.dll
+C:\Users\ADDmen\source\repos\labs_web\Serve\Serve\obj\Debug\net6.0\Serve.csproj.AssemblyReference.cache
+C:\Users\ADDmen\source\repos\labs_web\Serve\Serve\obj\Debug\net6.0\Serve.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADDmen\source\repos\labs_web\Serve\Serve\obj\Debug\net6.0\Serve.AssemblyInfoInputs.cache
+C:\Users\ADDmen\source\repos\labs_web\Serve\Serve\obj\Debug\net6.0\Serve.AssemblyInfo.cs
+C:\Users\ADDmen\source\repos\labs_web\Serve\Serve\obj\Debug\net6.0\Serve.csproj.CoreCompileInputs.cache
+C:\Users\ADDmen\source\repos\labs_web\Serve\Serve\obj\Debug\net6.0\Serve.csproj.CopyComplete
+C:\Users\ADDmen\source\repos\labs_web\Serve\Serve\obj\Debug\net6.0\Serve.dll
+C:\Users\ADDmen\source\repos\labs_web\Serve\Serve\obj\Debug\net6.0\refint\Serve.dll
+C:\Users\ADDmen\source\repos\labs_web\Serve\Serve\obj\Debug\net6.0\Serve.pdb
+C:\Users\ADDmen\source\repos\labs_web\Serve\Serve\obj\Debug\net6.0\Serve.genruntimeconfig.cache
+C:\Users\ADDmen\source\repos\labs_web\Serve\Serve\obj\Debug\net6.0\ref\Serve.dll

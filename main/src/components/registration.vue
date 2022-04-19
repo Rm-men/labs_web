@@ -40,7 +40,7 @@ export default {
         alert("Подтверждение пароля не совпадает!");
         return false;
       }
-      const url = 'https://14952d01-23e7-4615-93ec-a09dc0a2ef77.mock.pstmn.io/reg';
+      const url = 'api/author/check';
       const headers = {
         'Content-Type': 'application/json',
         'x-mock-match-request-body': 'true',

@@ -26,15 +26,15 @@ export default {
       const loginI = document.querySelector('.l_log_box');
       const l_login = loginI.textContent;
       const data = {
-        inp_login: (document.getElementById('l_login') as HTMLInputElement).value,
-        inp_pasw: (document.getElementById('l_pass') as HTMLInputElement).value,
+        login: (document.getElementById('l_login') as HTMLInputElement).value,
+        pasw: (document.getElementById('l_pass') as HTMLInputElement).value,
       };
-      const url = 'https://14952d01-23e7-4615-93ec-a09dc0a2ef77.mock.pstmn.io/author';
+      const url = 'api/author/login';
       const headers = {
         'Content-Type': 'application/json',
         'x-mock-match-request-body': 'true',
       };
-      alert(`Логин: ${data.inp_login}  Пароль: ${data.inp_pasw} `);
+      alert(`Логин: ${data.login}  Пароль: ${data.pasw} `);
       axios
         .post(url, data, { headers })
         .then((response) => {

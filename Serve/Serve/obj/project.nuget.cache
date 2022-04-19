@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "A79HT/77SD2cMG+ADDQTQp4TBDwdAjv4KhZyQQ5dHlGwUQ3mgWNvKnlaUksOVly4w7UcFtSacCVF4HwPSUlxaQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ADDmen\\source\\repos\\labs_web\\Serve\\Serve\\Serve.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ADDmen\\.nuget\\packages\\restpanda\\1.2.0\\restpanda.1.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}
