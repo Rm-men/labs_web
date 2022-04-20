@@ -3,12 +3,22 @@
   <button class="list-button" v-on:click="GetList">Отобразить список</button>
   <loader v-if="loading"/>
   <table v-else class="table">
-    <tr><th>ID</th><th>ФИО</th><th>Возраст</th><th>Почта</th></tr>
+    <tr><th>ID</th><th>ФИО</th><th>Пол</th><th>Возраст</th><th>Почта</th></tr>
     <tr v-on:click="GetId(item.id)" v-for="(item) in list" :key="item.id">
       <td>{{ item.id }}</td>
       <td>{{ item.fio }}</td>
+      <td>
+        <font-awesome-icon v-if="item.gender == true" icon="male" />
+        <font-awesome-icon v-else icon="female" />
+      </td>
       <td>{{ item.age }}</td>
-      <td>{{ item.email }}</td>
+      <td>
+          {{ item.email }}
+          <sup>
+            <font-awesome-icon v-if="item.verefic == true" icon="fa-check-circle" />
+            <font-awesome-icon v-else icon="fa-ban" />
+          </sup>
+      </td>
     </tr>
   </table>
   <div v-if="nada" class="window">
@@ -21,7 +31,14 @@
         <p>ID: {{element.id}}</p>
         <p>ФИО: {{element.fio}}</p>
         <p>Возраст: {{element.age}}</p>
-        <p>Email: {{element.email}}</p>
+        <p v-if="element.gender == true">Пол: мужской</p>
+        <p v-else>Пол: женский</p>
+        <p>Email: {{element.email}}          
+          <sup>
+            <font-awesome-icon v-if="element.verefic == true" icon="fa-check-circle" />
+            <font-awesome-icon v-else icon="fa-ban" />
+          </sup>
+        </p>     
       </div>
   </div>
 </div>
@@ -29,7 +46,13 @@
 </template>
 
 <script lang="ts">
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import axios from 'axios';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  faMale, faFemale, faCheckCircle, faBan,
+} from '@fortawesome/free-solid-svg-icons';
+library.add(faMale, faFemale, faCheckCircle, faBan);
 
 export default {
   data()  {
@@ -39,6 +62,9 @@ export default {
     list: [],
     element: {},
     };
+  },
+    components: {
+    FontAwesomeIcon,
   },
   methods: {
     GetList() {

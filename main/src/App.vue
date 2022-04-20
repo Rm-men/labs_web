@@ -8,7 +8,7 @@
     ></Practic>
     <Vyatsu :results="results" />
     <Autor class="center" />
-    <Table/>
+    <Table class="table"/>
   </div>
 <!-- eslint-enable max-len -->
 </template>
@@ -46,6 +46,9 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.table {
+width: 1500px;
+}
 .center {
   padding: 30px;
   text-align: center;

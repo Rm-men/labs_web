@@ -33,19 +33,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Noytbuk\\.nuget\\packages\\": {}
+    "C:\\Users\\ADDmen\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Noytbuk\\Documents\\GitHub\\labs_web\\Serve\\Serve\\Serve.csproj",
+      "projectUniqueName": "C:\\Users\\ADDmen\\source\\repos\\labs_web\\Serve\\Serve\\Serve.csproj",
       "projectName": "Serve",
-      "projectPath": "C:\\Users\\Noytbuk\\Documents\\GitHub\\labs_web\\Serve\\Serve\\Serve.csproj",
-      "packagesPath": "C:\\Users\\Noytbuk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Noytbuk\\Documents\\GitHub\\labs_web\\Serve\\Serve\\obj\\",
+      "projectPath": "C:\\Users\\ADDmen\\source\\repos\\labs_web\\Serve\\Serve\\Serve.csproj",
+      "packagesPath": "C:\\Users\\ADDmen\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ADDmen\\source\\repos\\labs_web\\Serve\\Serve\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Noytbuk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ADDmen\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
