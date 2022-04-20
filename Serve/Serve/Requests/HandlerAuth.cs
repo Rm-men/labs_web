@@ -24,8 +24,6 @@ public class HandlerAuth
             } 
         }
         response.Send(new { IsValid = true });
-
-
     }
 
     [Post("login")]

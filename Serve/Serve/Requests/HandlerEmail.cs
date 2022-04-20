@@ -23,7 +23,6 @@ namespace WebServer.Requests
                 s.Append("<tr>").Append($"<td>{student.id}</td>").Append($"<td>{student.fio}</td>")
                     .Append($"<td>{student.age}</td>").Append($"<td>{student.email}</td>").Append("</tr>" + Environment.NewLine);
             }
-
             s.Append("</table>");
             return s.ToString();
         }
