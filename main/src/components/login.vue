@@ -4,7 +4,7 @@
       <Passw />
      <h1 id="heading1"></h1>
         <form action="" class="myForm" name="myForm">
-            <button onClick="return false" v-on:click="reqestLogin" v-on:emitEventChanged="getAlert" >Войти</button>
+            <button onClick="return false" v-on:click="GetLogin" v-on:emitEventChanged="getAlert" >Войти</button>
         </form>
     </div>
 </template>
@@ -21,6 +21,28 @@ export default {
     results: [],
   },
   methods: {
+    GetLogin() {
+      const login :HTMLInputElement = document.getElementById('l_login') as HTMLInputElement;
+      const password :HTMLInputElement = document.getElementById('l_pass') as HTMLInputElement;
+      const config = {
+        url: 'api/author/login',
+      };
+      const data = {
+        login: login.value,
+        pass: password.value,
+      };
+      axios
+        .post(config.url, data, { headers: { 'x-mock-match-request-body': true } })
+        .then((response) => {
+          console.log(response.data.completed);
+          if (response.data.completed) {
+            alert('Авторизация пройдена');
+          } else alert('Введены неверные данные');
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
     reqestLogin() {
       const passwI = document.querySelector('.l_pas_box');
       const loginI = document.querySelector('.l_log_box');
@@ -38,12 +60,14 @@ export default {
       axios
         .post(url, data, { headers })
         .then((response) => {
-          alert('Авторизация пройдена');
+          console.log(response.data.completed);
+          if (response.data.completed) {
+            alert('Авторизация пройдена');
+          } else alert('Введены неверные данные');
         })
         .catch((error) => {
-          alert('Ошибка');
+          console.log(error);
         });
-      return false;
     },
     getAlert() {
       alert('логин Ис чанген {{inp_login}}');

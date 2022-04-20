@@ -6,7 +6,7 @@
      <h1 id="heading1"></h1>
 
         <form action="" class="myForm" name="myForm">
-            <button onClick="return false" v-on:click="reqestReg">Зарегистрироваться</button>
+            <button onClick="return false" v-on:click="IsValidLogin">Зарегистрироваться</button>
         </form>
   </div>
 </template>
@@ -26,6 +26,42 @@ export default {
     results: [],
   },
   methods: {
+      IsValidLogin() {
+      const login :HTMLInputElement = document.getElementById('r_login') as HTMLInputElement;
+      const password :HTMLInputElement = document.getElementById('r_pass') as HTMLInputElement;
+      const password2 :HTMLInputElement = document.getElementById('r_pass_req') as HTMLInputElement;
+      const config = {
+        url: 'api/author/check',
+      };
+      const data = {
+        login: login.value,
+        pass: password.value,
+      };
+      if (login.value === '') {
+        alert('Введите логин!');
+        return;
+      }
+      if (password.value === '') {
+        alert('Введите пароль!');
+        return;
+      }
+      if (password.value !== password2.value) {
+        alert('Пароли не совпадают!');
+        return;
+      }
+      axios.post(config.url, data)
+        .then((response) => {
+          console.log(response.data.IsValid);
+          if (!response.data.IsValid) {
+            alert('Логин занят');
+          } else {
+            alert('Логин свободен');
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
     reqestReg() {
       const datas = {
         inp_pasw: (document.getElementById('r_pass') as HTMLInputElement).value,
