@@ -66,95 +66,66 @@
 <p align = center>Листинг компонента Charts
 
 ```js
-import React from 'react';
-import * as am5 from "@amcharts/amcharts5";
-import * as am5xy from "@amcharts/amcharts5/xy";
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Net.Mail;
+using RestPanda.Requests.Attributes;
+using RestPanda.Requests;
+using WebServer.Entity;
+using System.Net;
 
-export declare type ChartProps = {
-	min: number,
-	max: number,
-	delta: number
+namespace WebServer.Requests
+{
+    [RequestHandler]
+    public class HandlerEmail
+    {
+        private static string FillTable()
+        {
+            var s = new StringBuilder("<table style=\"border-collapse: collapse\">" + Environment.NewLine);
+            s.Append("<tr><th>id</th><th>ФИО</th><th>Возраст</th><th>Почта</th></tr>" + Environment.NewLine);
+            foreach (var student in Student.Students)
+            {
+                s.Append("<tr>").Append($"<td>{student.id}</td>").Append($"<td>{student.fio}</td>")
+                    .Append($"<td>{student.age}</td>").Append($"<td>{student.email}</td>").Append("</tr>" + Environment.NewLine);
+            }
+            s.Append("</table>");
+            return s.ToString();
+        }
+
+        [Get]
+        public static void CommitMessange(PandaRequest request, PandaResponse response)
+        {
+            var from = new MailAddress("service_phone_in_kirov@mail.ru", "Администрация сервисного центра по ремонту телефонов");
+            var to = new MailAddress("ro.sym@yandex.ru", "Пользователь");
+            var msg = new MailMessage(from, to);
+            msg.Subject = "PDF file";
+            msg.Attachments.Add(
+                new Attachment("C://mail.pdf"));
+            msg.Body = "Тестовое сообщение";
+            using (var smtp = new SmtpClient("smtp.mail.ru", 587))
+            {
+                smtp.Credentials = new NetworkCredential("service_phone_in_kirov@mail.ru", "mLfsyTvqZpfEDu0VzUih");
+                smtp.EnableSsl = true;
+                smtp.Send(msg);
+            }
+
+            var msg2 = new MailMessage(from, to);
+            msg2.Subject = "Html документ";
+            msg2.Body = {длинная__ссылка}
+            msg2.Body += FillTable();
+            msg2.IsBodyHtml = true;
+            using (var smtp = new SmtpClient("smtp.mail.ru", 587))
+            {
+                smtp.Credentials = new NetworkCredential("service_phone_in_kirov@mail.ru", "mLfsyTvqZpfEDu0VzUih");
+                smtp.EnableSsl = true;
+                smtp.Send(msg2);
+            }
+            response.Send("");
+        }
+    }
 }
-
-type Point = {
-	x: number,
-	y: number
-}
-
-class Chart extends React.Component<ChartProps> {
-  funcMath() {
-		let points: Point[] = [];
-		let y: number;
-		for (let x = this.props.min; x < this.props.max; x += this.props.delta) {
-			 y= (3 * Math.pow(x, 3)) - (Math.pow(2, Math.exp(Math.pow(x, 3) - 2 * x * x - 1))) + Math.log(x) / Math.log(13);
-			points.push({x: x, y: y});
-		}
-		return points;
-	};
-
-
-  componentDidMount() {
-		const root = am5.Root.new("main");
-
-		let data = this.funcMath();
-
-		let chart = root.container.children.push(
-			am5xy.XYChart.new(root, {
-			})
-		);
-
-		let xAxis = chart.xAxes.push(
-			am5xy.ValueAxis.new(root, {
-					renderer: am5xy.AxisRendererX.new(root, {})
-				}
-			)
-		);
-
-		let yAxis = chart.yAxes.push(
-			am5xy.ValueAxis.new(root, {
-				renderer: am5xy.AxisRendererY.new(root, {})
-			})
-		);
-
-		let series = chart.series.push(
-			am5xy.LineSeries.new(root, {
-				xAxis: xAxis,
-				yAxis: yAxis,
-				valueYField: "y",
-				valueXField: "x",
-				tooltip: am5.Tooltip.new(root, {
-				})
-			})
-		);
-		series.data.setAll(data);
-	}
-
-	render() {
-		return <div>
-			<div id="main" style={{ width: "100%", height: "900px" }}/>
-		</div>;
-  };
-
-}
-```
-<br><br>
-
-<p align = center>Приложение Б
-
-<p align = center>Листинг компонента App
-
-```js
-import React from 'react';
-import Chart from './components/Chart';
-
-function App() {
-  return (
-    <div className="App">
-      <Chart min={0.01} max={2.46} delta={0.01}/>
-    </div>
-  );
-}
-
-export default App;
 ```
 <br><br>
