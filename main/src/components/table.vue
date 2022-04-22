@@ -47,6 +47,7 @@ export default {
       };
       axios.get(config.url)
         .then((response) => {
+          console.log(config.url);
           console.log(response.data);
           this.list = response.data;
           this.loading = false;
@@ -62,6 +63,7 @@ export default {
         .then((response) => {
           this.nada = true;
           this.element = response.data;
+          console.log(url);
         })
         .catch((error) => {
           console.log(error);

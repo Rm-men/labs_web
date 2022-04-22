@@ -6,12 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "Serve/1.0.0": {
+      "serve/1.0.0": {
         "dependencies": {
           "RestPanda": "1.2.0"
         },
         "runtime": {
-          "Serve.dll": {}
+          "serve.dll": {}
         }
       },
       "RestPanda/1.2.0": {
@@ -25,7 +25,7 @@
     }
   },
   "libraries": {
-    "Serve/1.0.0": {
+    "serve/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
