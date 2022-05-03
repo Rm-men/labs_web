@@ -9,19 +9,8 @@
 </template>
 
 <script lang="ts">
-import VueWasm from 'vue-wasm';
-import Vue from 'vue/types/umd';
-import factorial from "./wasm/functions.wasm";
-
-VueWasm(Vue, { modules: { functions: factorial } });
-const functions = factorial().then(({ instance }) => {
- return instance.exports
-});
-Vue.prototype.$wasm = {
-  arithmetic: extractModule(factorial), 
-  fibinachi: extractModule(fibinachiModule),
-};
-
+import factorial from "./functions.wasm";
+import * as factorials from "./functions";
 const inputs : HTMLInputElement = document.getElementById('input') as HTMLInputElement;
 const sendBtn : HTMLButtonElement = document.getElementById('send') as HTMLButtonElement;
 const resultText : HTMLSpanElement = document.getElementById('result') as HTMLSpanElement;
@@ -80,9 +69,5 @@ function importObject(bytes: ArrayBuffer, importObject: any) {
 }
 
 function importObject(bytes: ArrayBuffer, importObject: any) {
-	throw new Error('Function not implemented.');
-}
-
-function extractModule(fibinachiModule: any) {
 	throw new Error('Function not implemented.');
 }

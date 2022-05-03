@@ -24,6 +24,10 @@ module.exports = {
                 test: /\.wasm$/,
                 loaders: ['wasm-loader']
             },
+            loaders: [{
+                test: /\.wasm$/,
+                loaders: ['wasm-loader']
+            }]
         ],
     },
     plugins: [new VueLoaderPlugin(), new HtmlWebpackPlugin()],
